@@ -23,16 +23,17 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #666666; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #53459A; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #313131; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against  backgrounds of accent, heading, or default colors. */
+  --yellow-color: #F5DD25; /* Contrast color for text, ensuring readability against  backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #999999;  /* The default color of the main navmenu links */
-  --nav-hover-color: #000000; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #53459A; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #666666; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -40,7 +41,6 @@
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
@@ -145,6 +145,7 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+
 .header {
   --background-color: rgba(255, 255, 255, 0);
   color: var(--default-color);
@@ -152,6 +153,7 @@ h6 {
   padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
+  margin-bottom: 150px;
 }
 
 .header .logo {
@@ -159,7 +161,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 90px;
   margin-right: 8px;
 }
 
@@ -185,6 +187,13 @@ h6 {
   pointer-events: none;
   z-index: -1;
 }
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 120px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -757,6 +766,7 @@ section,
   letter-spacing: 2px;
   margin-bottom: 1.5rem;
   position: relative;
+  display: none;
 }
 
 .section-title .subtitle::after {
@@ -800,10 +810,13 @@ section,
   .hero .hero-content h1 {
     font-size: 2.5rem;
   }
+  .hero {
+    padding-top: 40px !important;
+  }
 }
 
 .hero .hero-content p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   margin-bottom: 3rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -826,20 +839,24 @@ section,
 
 .hero .hero-cta .btn-primary {
   background-color: var(--accent-color);
+  background-color: #F5DD25;
   color: var(--contrast-color);
+  color:#000;
   padding: 14px 32px;
   border-radius: 6px;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
   border: none;
-  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%);
+  /* box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%); */
 }
 
 .hero .hero-cta .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  background-color: #E8CC0B;
+  color:#000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+  /* box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%); */
 }
 
 .hero .hero-cta .btn-secondary {
@@ -905,23 +922,24 @@ section,
 .hero .hero-image .floating-card {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  /* left: 20px; */
+  left:-40px;
   background: var(--surface-color);
-  padding: 1.5rem;
+  padding: 1.0rem;
   border-radius: 12px;
-  box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 10px 40px color-mix(in srgb, var(--default-color), transparent 60%);
   display: flex;
   align-items: center;
   gap: 1rem;
-  min-width: 200px;
+  min-width: 150px;
 }
 
 @media (max-width: 768px) {
   .hero .hero-image .floating-card {
-    bottom: 10px;
-    left: 10px;
-    padding: 1rem;
-    min-width: 160px;
+    bottom: -30px;
+    left: 30%;
+    padding: 0.5rem;
+    min-width: 140px;
   }
 }
 
@@ -970,6 +988,7 @@ section,
     margin-top: 3rem;
   }
 }
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1169,8 +1188,24 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%);
+ /* background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%); */
+  background: radial-gradient(
+      circle at center,
+     #A562FF 0%,
+     #6C37CE 35%,
+     #4a148c 60%,
+     #2b0a5e 100%
+    );
 }
+
+.services h2 {
+  color:#fff;
+}
+.services .section-title p {
+  color:#fff;
+  opacity: .5;
+}
+
 
 .services .service-item {
   padding: 60px 40px;
@@ -1191,7 +1226,7 @@ section,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+  background: linear-gradient(90deg, var(--yellow-color), color-mix(in srgb, var(--yellow-color), var(--yellow-color) 30%));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease-in-out;
@@ -1221,7 +1256,8 @@ section,
 .services .service-item .service-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%));
+  /* background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%)); */
+  background-color: var(--yellow-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1233,7 +1269,13 @@ section,
 
 .services .service-item .service-icon i {
   font-size: 32px;
-  color: var(--contrast-color);
+  /* color: var(--contrast-color); */
+  color:#333;
+}
+
+.services .service-item i {
+  color:#53459A;
+  margin-right: 5px;
 }
 
 .services .service-item h3 {
@@ -1261,6 +1303,7 @@ section,
   gap: 8px;
   transition: all 0.3s ease-in-out;
   align-self: flex-start;
+  display: none;
 }
 
 .services .service-item .service-link i {
