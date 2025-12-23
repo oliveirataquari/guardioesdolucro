@@ -225,32 +225,12 @@
             <div class="swiper-slide">
               <div class="blog-hero-item">
                 <img src="assets/img/blog/blog-hero-1.webp" alt="Blog Hero Image" class="img-fluid">
-                <div class="blog-hero-content">
-                  <span class="category">Lifestyle</span>
-                  <h1>5 Efficient Rules How to Organize Working Place Relationship</h1>
-                  <div class="meta">
-                    <span class="author">BY <a href="#">Dary Smith</a></span>
-                    <span class="date">02 Jan, 2024</span>
-                    <span class="read-time">3 Minute Read</span>
-                    <span class="views">1.9k views</span>
-                  </div>
-                </div>
               </div>
             </div><!-- End slide item -->
 
             <div class="swiper-slide">
               <div class="blog-hero-item">
                 <img src="assets/img/blog/blog-hero-5.webp" alt="Blog Hero Image" class="img-fluid">
-                <div class="blog-hero-content">
-                  <span class="category">Innovation</span>
-                  <h1>Sustainable Business Practices for the Modern Enterprise</h1>
-                  <div class="meta">
-                    <span class="author">BY <a href="#">Emma Davis</a></span>
-                    <span class="date">6 Jan, 2024</span>
-                    <span class="read-time">3 Minute Read</span>
-                    <span class="views">2.5k views</span>
-                  </div>
-                </div>
               </div>
             </div><!-- End slide item -->
 
@@ -288,7 +268,50 @@
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="image-wrapper">
+
+  <!-- Slides Section -->
+    <section id="slides" class="slides section">
+        <div class="blog-hero-slider swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 1000,
+              "effect": "fade",
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": 1,
+              "navigation": {
+                "nextEl": ".swiper-button-next",
+                "prevEl": ".swiper-button-prev"
+              }
+            }
+          </script>
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="blog-hero-item">
+                <img src="assets/img/blog/blog-hero-1.webp" alt="Blog Hero Image" class="img-fluid">
+              </div>
+            </div><!-- End slide item -->
+
+            <div class="swiper-slide">
+              <div class="blog-hero-item">
+                <img src="assets/img/blog/blog-hero-5.webp" alt="Blog Hero Image" class="img-fluid">
+              </div>
+            </div><!-- End slide item -->
+
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+        </div>
+    </section><!-- /slides Section -->
+
+
+            <div class="image-wrapper hide">
               <img src="assets/img/about/about-8.webp" alt="Professional team collaboration" class="img-fluid">
             </div>
           </div>

@@ -1146,35 +1146,6 @@ section,
 }
 
 
-/*--------------------------------------------------------------
-# Featured Posts Section
---------------------------------------------------------------*/
-.featured-posts {
-  padding: 80px 0;
-  background: linear-gradient(135deg, var(--surface-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
-}
-
-.featured-posts .blog-posts-slider .swiper-wrapper {
-  height: auto !important;
-}
-
-.featured-posts .blog-posts-slider .swiper-pagination {
-  position: relative;
-  margin-top: 50px;
-}
-
-.featured-posts .blog-posts-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: color-mix(in srgb, var(--default-color), transparent 70%);
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-.featured-posts .blog-posts-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: var(--accent-color);
-  transform: scale(1.2);
-}
 
 
 
