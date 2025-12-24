@@ -1349,11 +1349,11 @@ section,
 .services {
  /* background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%); */
   background: radial-gradient(
-      circle at center,
-     #A562FF 0%,
-     #6C37CE 35%,
-     #4a148c 60%,
-     #2b0a5e 100%
+     circle at center,
+  #6B5FC2 0%,
+  #53459A 30%,
+  #3C3A7A 60%,
+  #1C1F4A 100%
     );
 }
 
@@ -4387,4 +4387,20 @@ section,
 
 .hide {
   display:none !important
+}
+
+.swiper-slide img {
+  border-radius: 10px;
+}
+
+.swiper-wrapper {
+  height: auto !important;
+}
+
+.content h2 {
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  font-family: var(--heading-font);
 }
