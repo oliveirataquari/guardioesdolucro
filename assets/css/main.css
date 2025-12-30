@@ -180,9 +180,9 @@ h6 {
 }
 
 .scrolled .header .logo img {
-  max-height: 50px;
+  max-height: 40px;
   margin-right: 8px;
-  content: url("../img/favicon.png");
+  content: url("../img/logo-sticky.png");
 }
 
 .scrolled .header::before {
@@ -4072,7 +4072,7 @@ section,
   margin: 0;
   font-family: var(--heading-font);
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--heading-color);
   transition: all 0.3s ease;
   line-height: 1.5;
