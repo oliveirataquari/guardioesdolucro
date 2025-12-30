@@ -163,6 +163,8 @@ h6 {
 .header .logo img {
   max-height: 90px;
   margin-right: 8px;
+  transition: max-height 0.3s ease;
+  content: url("../img/logo-gl.png");
 }
 
 .header .logo h1 {
@@ -175,6 +177,12 @@ h6 {
 .scrolled .header {
   isolation: isolate;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.scrolled .header .logo img {
+  max-height: 50px;
+  margin-right: 8px;
+  content: url("../img/favicon.png");
 }
 
 .scrolled .header::before {
