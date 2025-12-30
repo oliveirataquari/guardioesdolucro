@@ -161,7 +161,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 90px;
+  max-height: 110px;
   margin-right: 8px;
   transition: max-height 0.3s ease;
   content: url("../img/logo-gl.png");
@@ -211,6 +211,11 @@ h6 {
   .navmenu {
     padding: 0;
   }
+  
+  /* Centraliza o menu no header */
+  #navmenu {
+    margin: 0 auto;
+  }
 
   .navmenu ul {
     margin: 0;
@@ -224,18 +229,20 @@ h6 {
     position: relative;
   }
 
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
     font-size: 14px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+    text-transform: uppercase;
   }
 
   .navmenu a i,
@@ -311,6 +318,12 @@ h6 {
     left: -100%;
     visibility: visible;
   }
+
+  /* Empurra apenas o item Contact para a direita */
+  #navmenu ul li:last-child {
+    margin-left: auto;
+  }
+
 }
 
 /* Navmenu - Mobile */

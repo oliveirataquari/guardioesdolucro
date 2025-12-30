@@ -50,27 +50,19 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>O Treinamento</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
             <ul>
               <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
               <li><a href="#">Dropdown 2</a></li>
               <li><a href="#">Dropdown 3</a></li>
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>
+          
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -740,7 +732,7 @@ Serão mais de 60 horas de conteúdo ao vivo e online.</p>
                 <h3>Send us a message</h3>
               </div>
 
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              <form action="https://formspree.io/f/mbjvzwva" method="post" class="php-email-form" id="contact-form" >
 
                 <div class="row">
                   <div class="col-md-6">
@@ -769,14 +761,21 @@ Serão mais de 60 horas de conteúdo ao vivo e online.</p>
 
                 <div class="my-3">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <!-- <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
                 </div>
 
                 <button type="submit" class="submit-btn">
-                  <span>Send Message</span>
+                  <span>Enviar mensagem</span>
                   <i class="bi bi-arrow-right"></i>
                 </button>
+
+                <!-- Mensagem de sucesso -->
+                <div id="success-message" class="alert alert-success mt-3 d-none">
+                  <p>✅ Mensagem enviada com sucesso! Em breve entraremos em contato.</p>
+                </div>
+
+                <input type="hidden" name="_replyto">
 
               </form>
 
@@ -863,7 +862,7 @@ Serão mais de 60 horas de conteúdo ao vivo e online.</p>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -873,6 +872,33 @@ Serão mais de 60 horas de conteúdo ao vivo e online.</p>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+   <!-- Script do formulário de email -->
+  <script>
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        successMessage.classList.remove('d-none');
+      } else {
+        alert('Erro ao enviar. Tente novamente.');
+      }
+    });
+  </script>
 
 </body>
 
