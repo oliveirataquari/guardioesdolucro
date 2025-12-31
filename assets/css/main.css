@@ -181,7 +181,7 @@ h6 {
 
 .scrolled .header .logo img {
   max-height: 40px;
-  margin-right: 8px;
+  margin-right: 95px; /* Para manter no mesmo eixo X da tela */
   content: url("../img/logo-sticky.png");
 }
 
