@@ -90,6 +90,14 @@ h6 {
   font-family: var(--heading-font);
 }
 
+p,li {
+  font-size: 1.25rem;
+  opacity: .75;
+}
+
+
+
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -804,7 +812,7 @@ section,
 }
 
 .section-title p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   line-height: 1.3;
   color: color-mix(in srgb, var(--heading-color), transparent 25%);
   max-width: 900px;
@@ -818,19 +826,18 @@ section,
 }
 .section-title2 h2 {
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   color: var(--heading-color);
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 .section-title2 p {
-  font-size: 1.125rem;
   line-height: 1.8;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-  max-width: 900px;
-  margin: 0 auto;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  color:#fff;
+  opacity: .8;
   text-wrap: balance;
 }
 
@@ -843,14 +850,14 @@ section,
   color: var(--heading-color);
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 120px 0 100px;
+  padding: 180px 0 40px;
   position: relative;
   overflow: hidden;
 }
@@ -876,7 +883,7 @@ section,
   font-size: 1.1rem;
   line-height: 1.7;
   margin-bottom: 3rem;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-color);
 }
 
 .hero .hero-cta {
@@ -1427,7 +1434,10 @@ section,
   background-size: cover ; */
 }
 
-.services h2 {
+.services p,
+.services h2,
+.services h3,
+.services li {
   color:#fff;
 }
 .services .section-title p {
@@ -1498,8 +1508,8 @@ section,
 
 .services .service-item .service-icon i {
   font-size: 32px;
-  /* color: var(--contrast-color); */
-  color:#333;
+  /* color: var(--contrast-color); 
+  color:#333; */
 }
 
 .services .service-item i {
@@ -1555,10 +1565,6 @@ section,
     font-size: 28px;
   }
 
-  .services .service-item h3 {
-    font-size: 20px;
-    margin-bottom: 16px;
-  }
 
   .services .service-item p {
     font-size: 15px;
