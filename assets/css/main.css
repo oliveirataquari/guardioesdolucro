@@ -15,7 +15,7 @@
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Montserrat",  sans-serif;
+  --heading-font: "Poppins",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
@@ -90,10 +90,21 @@ h6 {
   font-family: var(--heading-font);
 }
 
-p,li {
+.container p, .container li {
   font-size: 1.25rem;
-  opacity: .75;
+  opacity: .6;
 }
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.container ul {
+  padding-left: 20px !important;
+}
+
 
 
 
@@ -236,7 +247,6 @@ p,li {
   .navmenu li {
     position: relative;
   }
-
 
   .navmenu a,
   .navmenu a:focus {
@@ -749,7 +759,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 80px 0;
   scroll-margin-top: 87px;
   overflow: clip;
 }
@@ -833,12 +843,13 @@ section,
   letter-spacing: -1px;
   /* text-transform: uppercase; */
 }
+
+/*
 .section-title2 p {
   line-height: 1.8;
   color: color-mix(in srgb, var(--default-color), transparent 15%);
   color:#fff;
   opacity: .8;
-  text-wrap: balance;
 }
 
 .title2 p {
@@ -850,8 +861,9 @@ section,
   color: var(--heading-color);
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
-  /* text-transform: uppercase; */
+  text-transform: uppercase; 
 }
+*/
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -880,7 +892,7 @@ section,
 }
 
 .hero .hero-content p {
-  font-size: 1.1rem;
+  
   line-height: 1.7;
   margin-bottom: 3rem;
   color: var(--default-color);
@@ -1215,7 +1227,7 @@ section,
 
 
 /*--------------------------------------------------------------
-# About Section
+# About Section (A verdade que quase ninguém conta)
 --------------------------------------------------------------*/
 .about {
   padding-bottom: 120px;
@@ -1257,7 +1269,7 @@ section,
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 25px;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  /* xx color: color-mix(in srgb, var(--default-color), transparent 25%); */
 }
 
 .about .stats-row {
@@ -1397,9 +1409,8 @@ section,
 }
 
 .about .image-wrapper .floating-card .card-content .text p {
-  font-size: 14px;
   margin: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  /* xx color: color-mix(in srgb, var(--default-color), transparent 30%); */
   line-height: 1.6;
 }
 
@@ -1417,11 +1428,12 @@ section,
   }
 }
 
+
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
 .services {
- /* background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%); */
   background: radial-gradient(
      circle at center,
   #6B5FC2 0%,
@@ -1429,12 +1441,10 @@ section,
   #3C3A7A 60%,
   #1C1F4A 100%
   );
-
-  /* background:url('../img/dor1.jpg');
-  background-size: cover ; */
 }
 
 .services p,
+.services h1,
 .services h2,
 .services h3,
 .services li {
@@ -1445,6 +1455,12 @@ section,
   opacity: .5;
 }
 
+.services h1 {
+  font-size: 3.0rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
 
 .services .service-item {
   padding: 60px 40px;
@@ -1564,7 +1580,6 @@ section,
   .services .service-item .service-icon i {
     font-size: 28px;
   }
-
 
   .services .service-item p {
     font-size: 15px;
@@ -4208,9 +4223,6 @@ section,
 
 
 
-
-
-
 /*--------------------------------------------------------------
 # Tiago
 --------------------------------------------------------------*/
@@ -4242,10 +4254,4 @@ section,
   z-index: 2;
 } */
 
-.about .content p,
-.about .content h2,
-.about .content h3
-{
-  color:#fff !important;
-}
 
