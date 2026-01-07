@@ -22,7 +22,7 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #666666; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #53459A; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #313131; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -90,8 +90,17 @@ h6 {
   letter-spacing: -1px;
 }
 
+h2 {
+  margin-bottom: 1em;
+  font-size: 3.0rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--heading-color);
+}
+
 h2 span {
-  font-size: 1.8em;
+  font-size: 1.6em;
   line-height: 1em;
   padding-bottom: 20px;
   display: block;
@@ -99,21 +108,12 @@ h2 span {
 
 .container p, .container li {
   font-size: 1.2rem;
-  opacity: .6;
-}
-
-h2 {
-  font-size: 2.8rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
+  opacity: .8;
 }
 
 .container ul {
   padding-left: 20px !important;
 }
-
-
-
 
 
 /* PHP Email Form Messages
@@ -1240,23 +1240,15 @@ section,
 --------------------------------------------------------------*/
 .about {
   padding: 0px; /* favorece a imagem do rapaz sem padding */
-  background-color: #222;
-    background: radial-gradient(
-    circle at 50% 35%,
-    rgba(255, 255, 255, 0.08) 0%,
-    rgba(255, 255, 255, 0.04) 25%,
-    rgba(0, 0, 0, 0.9) 60%
-  ),
-  #111;
-  color:#fff !important;
 }
 
-.about .content h2 {
-  font-size: 42px;
+.about h2 {
+  /* font-size: 42px;
   font-weight: 300;
   line-height: 1.3;
   margin-bottom: 30px;
   font-family: var(--heading-font);
+  color:var(--heading-color); */
 }
 
 @media (max-width: 768px) {
@@ -1273,7 +1265,7 @@ section,
   font-weight: 400;
   line-height: 1.7;
   margin-bottom: 40px;
-  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 15%); */
 }
 
 .about .content p {
@@ -1287,30 +1279,6 @@ section,
   display: flex;
   gap: 40px;
   margin: 60px 0;
-}
-
-@media (max-width: 576px) {
-  .about .stats-row {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
-
-.about .stats-row .stat-item .stat-number {
-  font-size: 48px;
-  font-weight: 300;
-  line-height: 1;
-  color: var(--accent-color);
-  font-family: var(--heading-font);
-}
-
-.about .stats-row .stat-item .stat-label {
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-top: 8px;
 }
 
 .about .cta-section {
@@ -1423,9 +1391,6 @@ section,
   margin: 0;
   /* xx color: color-mix(in srgb, var(--default-color), transparent 30%); */
   line-height: 1.6;
-}
-.about li {
-  color:#fff;
 }
 
 @media (max-width: 992px) {
@@ -4267,5 +4232,3 @@ section,
   position: relative;
   z-index: 2;
 } */
-
-
