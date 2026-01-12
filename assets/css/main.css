@@ -283,7 +283,7 @@ h2 span {
   
   /* Centraliza o menu no header */
   #navmenu {
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   .navmenu ul {
@@ -397,7 +397,7 @@ h2 span {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: #000;
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -902,7 +902,7 @@ section,
   color: var(--default-color);
 }
 
-.hero .hero-cta {
+ .hero-cta {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 4rem;
@@ -910,15 +910,15 @@ section,
 }
 
 @media (max-width: 576px) {
-  .hero .hero-cta {
+  .hero-cta {
     flex-direction: column;
     align-items: flex-start;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
-.hero .hero-cta .btn-primary {
+.hero-cta .btn-primary {
   background-color: var(--accent-color);
   background-color: #F5DD25;
   color: var(--contrast-color);
@@ -932,7 +932,7 @@ section,
   /* box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%); */
 }
 
-.hero .hero-cta .btn-primary:hover {
+.hero-cta .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 10%);
   background-color: #E8CC0B;
   color:#000;
@@ -940,7 +940,7 @@ section,
   /* box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%); */
 }
 
-.hero .hero-cta .btn-secondary {
+.hero-cta .btn-secondary {
   color: var(--heading-color);
   text-decoration: none;
   display: flex;
@@ -4248,4 +4248,19 @@ section,
 .about-secure .icon-wrapper {
   margin: 0 auto;
   margin-bottom: 10px;
+}
+
+.btn-whatsapp {
+  padding-right: 20px;
+  border-radius: 8px;
+  background-color: var(--heading-color);
+}
+.btn-whatsapp:hover {
+  background-color: #423678;
+}
+.btn-whatsapp a, .btn-whatsapp a:hover  {
+  color: #fff !important;
+}
+.navmenu .btn-whatsapp  {
+  margin-left: 20px !important;
 }
