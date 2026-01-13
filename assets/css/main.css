@@ -344,7 +344,7 @@ h2 span {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
   }
 
   .navmenu .dropdown ul li {
@@ -2109,6 +2109,7 @@ section,
   background-color: var(--surface-color);
   padding: 20px 30px;
   border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.05);
 }
 
 .contact .form-wrapper .form-group {
@@ -4216,7 +4217,7 @@ section,
 .about-secure {
   /* background-color: var(--cinza-claro-color); */
   background-color: #222;
-  background: url("../img/bg-secure1.jpg");
+  background: url("../img/bg-02.jpg");
   background-size: cover;
 }
 .about-secure-logo {
@@ -4264,3 +4265,19 @@ section,
 .navmenu .btn-whatsapp  {
   margin-left: 20px !important;
 }
+
+
+.services-pq-nos {
+  padding-bottom: 0px; /* favorece a imagem do rapaz sem padding */
+  background-color: #222;
+  background: url("../img/bg-secure1.jpg");
+  background-size: cover;
+}
+.services-pq-nos h2, .services-pq-nos h4, .services-pq-nos li {
+  color:#fff;
+}
+.services-pq-nos li {
+  opacity: .5;
+}
+
+
