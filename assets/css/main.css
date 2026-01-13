@@ -249,7 +249,7 @@ h2 span {
 }
 
 .scrolled .header .logo img {
-  max-height: 40px;
+  max-height: 50px;
   margin-right: 95px; /* Para manter no mesmo eixo X da tela */
   content: url("../img/logo-sticky.png");
 }
