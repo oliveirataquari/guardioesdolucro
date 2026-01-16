@@ -888,7 +888,8 @@ section,
 
 @media (max-width: 768px) {
   .hero .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
+    margin-top: -20px;
   }
   .hero {
     padding-top: 40px !important;
